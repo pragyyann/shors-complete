@@ -1,0 +1,211 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// --------------------------------------------------
+// ENUMS
+// --------------------------------------------------
+
+enum Role {
+  ADMIN
+  EDITOR
+}
+
+enum HeroMediaType {
+  IMAGE
+  VIDEO
+}
+
+enum ImageType {
+  MAIN
+  HOVER
+  DETAIL_1
+  DETAIL_2
+}
+
+
+
+enum PreorderStatus {
+  NEW
+  CONTACTED
+  CONFIRMED
+  IN_PRODUCTION
+  READY
+  DELIVERED
+  CANCELLED
+}
+
+// --------------------------------------------------
+// MODELS
+// --------------------------------------------------
+
+model Admin {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  password  String
+  role      Role
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Hero {
+  id                Int             @id @default(autoincrement())
+
+  title             String?
+  subtitle          String?
+  description       String?         @db.Text
+
+  mediaType         HeroMediaType?
+
+  desktopMediaUrl   String?
+  desktopPublicId   String?
+
+  mobileMediaUrl    String?
+  mobilePublicId    String?
+
+  ctaText           String?
+  ctaLink           String?
+
+  isActive          Boolean         @default(true)
+
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime        @updatedAt
+}
+
+model Product {
+  id              Int      @id @default(autoincrement())
+  category        String   @default("Root Tote")
+  name            String
+  slug            String   @unique
+  description     String?  @db.Text
+  material        String?
+  preorderMessage String?
+  isFeatured      Boolean  @default(false)
+  isActive        Boolean  @default(true)
+  displayOrder    Int      @default(0)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  images     ProductImage[]
+  preorders  Preorder[]
+
+
+
+  moduleBlockOneProductOne HomepageShowcaseModule[] @relation("BlockOneProductOne")
+  moduleBlockOneProductTwo HomepageShowcaseModule[] @relation("BlockOneProductTwo")
+  moduleBlockTwoProductOne HomepageShowcaseModule[] @relation("BlockTwoProductOne")
+  moduleBlockTwoProductTwo HomepageShowcaseModule[] @relation("BlockTwoProductTwo")
+
+  @@index([slug])
+}
+
+model ProductImage {
+  id           Int       @id @default(autoincrement())
+  productId    Int
+  imageUrl     String
+  publicId     String
+  imageType    ImageType
+  displayOrder Int       @default(0)
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+}
+
+
+
+model HomepageShowcaseModule {
+  id                    Int      @id @default(autoincrement())
+  
+  blockOneBannerImage         String?
+  blockOneBannerImagePublicId String?
+  blockOneLabel                 String?
+  blockOneCollectionName        String?
+  blockOneDescription           String?  @db.Text
+  blockOneProductOneId          Int?
+  blockOneProductTwoId          Int?
+  blockOneIsActive              Boolean  @default(true)
+  
+  blockTwoBannerImage         String?
+  blockTwoBannerImagePublicId String?
+  blockTwoLabel                 String?
+  blockTwoCollectionName        String?
+  blockTwoDescription           String?  @db.Text
+  blockTwoProductOneId          Int?
+  blockTwoProductTwoId          Int?
+  blockTwoIsActive              Boolean  @default(true)
+
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+
+  blockOneProductOne Product? @relation("BlockOneProductOne", fields: [blockOneProductOneId], references: [id])
+  blockOneProductTwo Product? @relation("BlockOneProductTwo", fields: [blockOneProductTwoId], references: [id])
+  
+  blockTwoProductOne Product? @relation("BlockTwoProductOne", fields: [blockTwoProductOneId], references: [id])
+  blockTwoProductTwo Product? @relation("BlockTwoProductTwo", fields: [blockTwoProductTwoId], references: [id])
+}
+
+model Customer {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String?
+  phone     String   @unique
+  city      String?
+  state     String?
+  country   String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  preorders Preorder[]
+
+  @@index([phone])
+  @@index([email])
+}
+
+model Preorder {
+  id         Int            @id @default(autoincrement())
+  customerId Int
+  productId  Int
+  fullName   String         @default("")
+  quantity   Int            @default(1)
+  status        PreorderStatus @default(NEW)
+  notes         String?        @db.Text
+  message       String?        @db.Text
+  internalNotes String?        @db.Text
+  createdAt     DateTime       @default(now())
+  updatedAt  DateTime       @updatedAt
+
+  customer Customer @relation(fields: [customerId], references: [id])
+  product  Product  @relation(fields: [productId], references: [id])
+
+  @@index([status])
+}
+
+model Visitor {
+  id        Int      @id @default(autoincrement())
+  ipAddress String?
+  country   String?
+  city      String?
+  device    String?
+  browser   String?
+  os        String?
+  page      String?
+  referrer  String?
+  visitedAt DateTime @default(now())
+}
+model CommunityMember {
+  id          Int      @id @default(autoincrement())
+  name        String
+  phone       String
+  email       String?
+  sourcePage  String?
+  triggerType String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
