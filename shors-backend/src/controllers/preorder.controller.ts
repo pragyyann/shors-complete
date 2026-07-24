@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { asyncHandler } from "../middleware/asyncHandler";
-import { PreorderService } from "../services/preorder.service";
+import { asyncHandler } from "../middleware/asyncHandler.js";
+import { PreorderService } from "../services/preorder.service.js";
 import { PreorderStatus } from "@prisma/client";
 
 const preorderService = new PreorderService();

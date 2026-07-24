@@ -1,13 +1,13 @@
 import { Router } from "express";
-import authRoutes from "./auth.routes";
-import heroRoutes from "./hero.routes";
-import productRoutes from "./product.routes";
-import homepageShowcaseModuleRoutes from "./homepageShowcaseModule.routes";
-import preorderRoutes from "./preorder.routes";
-import uploadRoutes from "./upload.routes";
-import dashboardRoutes from "./dashboard.routes";
-import settingsRoutes from "./settings.routes";
-import communityRoutes from "./community.routes";
+import authRoutes from "./auth.routes.js";
+import heroRoutes from "./hero.routes.js";
+import productRoutes from "./product.routes.js";
+import homepageShowcaseModuleRoutes from "./homepageShowcaseModule.routes.js";
+import preorderRoutes from "./preorder.routes.js";
+import uploadRoutes from "./upload.routes.js";
+import dashboardRoutes from "./dashboard.routes.js";
+import settingsRoutes from "./settings.routes.js";
+import communityRoutes from "./community.routes.js";
 
 const router = Router();
 

@@ -6,11 +6,11 @@ import {
   createProduct,
   updateProduct,
   deleteProduct,
-} from "../controllers/product.controller";
-import { authenticate } from "../middleware/authenticate";
-import { authorize } from "../middleware/authorize";
-import { validate } from "../middleware/validate.middleware";
-import { createProductSchema, updateProductSchema } from "../validators/product.validator";
+} from "../controllers/product.controller.js";
+import { authenticate } from "../middleware/authenticate.js";
+import { authorize } from "../middleware/authorize.js";
+import { validate } from "../middleware/validate.middleware.js";
+import { createProductSchema, updateProductSchema } from "../validators/product.validator.js";
 
 const router = Router();
 
@@ -19,8 +19,8 @@ import {
   uploadProductImage,
   updateProductImageDisplayOrder,
   deleteProductImage
-} from "../controllers/productImage.controller";
-import { upload } from "../middleware/upload.middleware";
+} from "../controllers/productImage.controller.js";
+import { upload } from "../middleware/upload.middleware.js";
 
 // Public Routes
 router.get("/", getProducts);

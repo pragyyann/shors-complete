@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { asyncHandler } from "../middleware/asyncHandler";
-import { ProductService } from "../services/product.service";
+import { asyncHandler } from "../middleware/asyncHandler.js";
+import { ProductService } from "../services/product.service.js";
 
 const productService = new ProductService();
 

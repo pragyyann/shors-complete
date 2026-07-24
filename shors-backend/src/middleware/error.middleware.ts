@@ -1,8 +1,8 @@
 import { Request, Response, NextFunction } from "express";
 import { ZodError } from "zod";
-import { ApiError } from "../utils/ApiError";
-import { env } from "../config/env";
-import { logger } from "../utils/logger";
+import { ApiError } from "../utils/ApiError.js";
+import { env } from "../config/env.js";
+import { logger } from "../utils/logger.js";
 
 export const notFoundHandler = (req: Request, res: Response, next: NextFunction) => {
   next(new ApiError(404, `Not Found - ${req.originalUrl}`));

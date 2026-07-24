@@ -1,5 +1,5 @@
-import { prisma } from "../lib/prisma";
-import { ApiError } from "../utils/ApiError";
+import { prisma } from "../lib/prisma.js";
+import { ApiError } from "../utils/ApiError.js";
 import { PreorderStatus, Prisma } from "@prisma/client";
 
 interface GetPreordersOptions {

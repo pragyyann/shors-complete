@@ -1,7 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcrypt";
-import { ApiError } from "../utils/ApiError";
-import { generateToken } from "../utils/jwt";
+import { ApiError } from "../utils/ApiError.js";
+import { generateToken } from "../utils/jwt.js";
 
 export class AuthService {
   constructor(private prisma: PrismaClient) {}

@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { uploadImage, deleteImage } from "../controllers/upload.controller";
-import { upload } from "../middleware/upload.middleware";
-import { authenticate } from "../middleware/authenticate";
-import { authorize } from "../middleware/authorize";
+import { uploadImage, deleteImage } from "../controllers/upload.controller.js";
+import { upload } from "../middleware/upload.middleware.js";
+import { authenticate } from "../middleware/authenticate.js";
+import { authorize } from "../middleware/authorize.js";
 
 const router = Router();
 

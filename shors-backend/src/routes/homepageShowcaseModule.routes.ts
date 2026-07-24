@@ -2,12 +2,12 @@ import { Router } from "express";
 import {
   getHomepageShowcase,
   updateHomepageShowcase,
-} from "../controllers/homepageShowcaseModule.controller";
-import { authenticate } from "../middleware/authenticate";
-import { authorize } from "../middleware/authorize";
-import { validate } from "../middleware/validate.middleware";
-import { upload } from "../middleware/upload.middleware";
-import { updateHomepageShowcaseModuleSchema } from "../validators/homepageShowcaseModule.validator";
+} from "../controllers/homepageShowcaseModule.controller.js";
+import { authenticate } from "../middleware/authenticate.js";
+import { authorize } from "../middleware/authorize.js";
+import { validate } from "../middleware/validate.middleware.js";
+import { upload } from "../middleware/upload.middleware.js";
+import { updateHomepageShowcaseModuleSchema } from "../validators/homepageShowcaseModule.validator.js";
 
 const router = Router();
 

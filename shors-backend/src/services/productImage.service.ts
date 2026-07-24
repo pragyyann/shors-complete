@@ -1,6 +1,6 @@
-import { prisma } from "../lib/prisma";
-import { ApiError } from "../utils/ApiError";
-import { UploadService } from "./upload.service";
+import { prisma } from "../lib/prisma.js";
+import { ApiError } from "../utils/ApiError.js";
+import { UploadService } from "./upload.service.js";
 import { ImageType } from "@prisma/client";
 
 const uploadService = new UploadService();

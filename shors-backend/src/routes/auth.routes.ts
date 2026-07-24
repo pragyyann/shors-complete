@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { loginAdmin } from "../controllers/auth.controller";
-import { validate } from "../middleware/validate.middleware";
-import { loginSchema } from "../validators/auth.validator";
-import { authRateLimiter } from "../middleware/rateLimiter.middleware";
+import { loginAdmin } from "../controllers/auth.controller.js";
+import { validate } from "../middleware/validate.middleware.js";
+import { loginSchema } from "../validators/auth.validator.js";
+import { authRateLimiter } from "../middleware/rateLimiter.middleware.js";
 
 const router = Router();
 

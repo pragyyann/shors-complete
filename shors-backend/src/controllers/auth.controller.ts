@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { asyncHandler } from "../middleware/asyncHandler";
-import { AuthService } from "../services/auth.service";
-import { prisma } from "../lib/prisma";
+import { asyncHandler } from "../middleware/asyncHandler.js";
+import { AuthService } from "../services/auth.service.js";
+import { prisma } from "../lib/prisma.js";
 
 const authService = new AuthService(prisma);
 

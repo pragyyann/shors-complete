@@ -1,9 +1,9 @@
 import { Request, Response } from "express";
-import { asyncHandler } from "../middleware/asyncHandler";
-import { ApiResponse } from "../utils/ApiResponse";
-import { AuthService } from "../services/auth.service";
-import { prisma } from "../lib/prisma";
-import { ApiError } from "../utils/ApiError";
+import { asyncHandler } from "../middleware/asyncHandler.js";
+import { ApiResponse } from "../utils/ApiResponse.js";
+import { AuthService } from "../services/auth.service.js";
+import { prisma } from "../lib/prisma.js";
+import { ApiError } from "../utils/ApiError.js";
 
 const authService = new AuthService(prisma);
 

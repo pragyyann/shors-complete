@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { asyncHandler } from "../middleware/asyncHandler";
-import { HomepageShowcaseModuleService } from "../services/homepageShowcaseModule.service";
-import { ApiError } from "../utils/ApiError";
+import { asyncHandler } from "../middleware/asyncHandler.js";
+import { HomepageShowcaseModuleService } from "../services/homepageShowcaseModule.service.js";
+import { ApiError } from "../utils/ApiError.js";
 
 const homepageShowcaseModuleService = new HomepageShowcaseModuleService();
 

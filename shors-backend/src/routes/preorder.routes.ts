@@ -4,11 +4,11 @@ import {
   getPreorderById,
   updatePreorder,
   createPreorder,
-} from "../controllers/preorder.controller";
-import { authenticate } from "../middleware/authenticate";
-import { authorize } from "../middleware/authorize";
-import { validate } from "../middleware/validate.middleware";
-import { updatePreorderSchema, createPreorderSchema } from "../validators/preorder.validator";
+} from "../controllers/preorder.controller.js";
+import { authenticate } from "../middleware/authenticate.js";
+import { authorize } from "../middleware/authorize.js";
+import { validate } from "../middleware/validate.middleware.js";
+import { updatePreorderSchema, createPreorderSchema } from "../validators/preorder.validator.js";
 
 const router = Router();
 

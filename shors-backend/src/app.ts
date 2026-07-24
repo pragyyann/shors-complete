@@ -5,11 +5,11 @@ import compression from "compression";
 import morgan from "morgan";
 import cookieParser from "cookie-parser";
 
-import { env } from "./config/env";
-import { corsOptions } from "./config/cors";
-import { errorHandler, notFoundHandler } from "./middleware/error.middleware";
-import { apiRateLimiter } from "./middleware/rateLimiter.middleware";
-import routes from "./routes";
+import { env } from "./config/env.js";
+import { corsOptions } from "./config/cors.js";
+import { errorHandler, notFoundHandler } from "./middleware/error.middleware.js";
+import { apiRateLimiter } from "./middleware/rateLimiter.middleware.js";
+import routes from "./routes/index.js";
 
 const app = express();
 

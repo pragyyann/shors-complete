@@ -1,5 +1,5 @@
-import { cloudinary } from "../config/cloudinary";
-import { ApiError } from "../utils/ApiError";
+import { cloudinary } from "../config/cloudinary.js";
+import { ApiError } from "../utils/ApiError.js";
 
 export class UploadService {
   /**
@@ -12,7 +12,7 @@ export class UploadService {
           folder: "shors",
           crop: "limit", // preserve aspect ratio while limiting dimensions if needed, or simply let Cloudinary maintain it by default
         },
-        (error, result) => {
+        (error: any, result: any) => {
           if (error) {
             console.error("========== CLOUDINARY ERROR ==========");
             console.dir(error, { depth: null });

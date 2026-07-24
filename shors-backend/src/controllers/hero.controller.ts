@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { asyncHandler } from "../middleware/asyncHandler";
-import { HeroService } from "../services/hero.service";
+import { asyncHandler } from "../middleware/asyncHandler.js";
+import { HeroService } from "../services/hero.service.js";
 
 const heroService = new HeroService();
 

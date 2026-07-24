@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { asyncHandler } from "../middleware/asyncHandler";
-import { UploadService } from "../services/upload.service";
-import { ApiError } from "../utils/ApiError";
+import { asyncHandler } from "../middleware/asyncHandler.js";
+import { UploadService } from "../services/upload.service.js";
+import { ApiError } from "../utils/ApiError.js";
 
 const uploadService = new UploadService();
 

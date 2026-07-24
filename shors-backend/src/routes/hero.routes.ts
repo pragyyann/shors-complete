@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { getHero, updateDesktopMedia, updateMobileMedia } from "../controllers/hero.controller";
-import { authenticate } from "../middleware/authenticate";
-import { authorize } from "../middleware/authorize";
-import { upload } from "../middleware/upload.middleware";
+import { getHero, updateDesktopMedia, updateMobileMedia } from "../controllers/hero.controller.js";
+import { authenticate } from "../middleware/authenticate.js";
+import { authorize } from "../middleware/authorize.js";
+import { upload } from "../middleware/upload.middleware.js";
 
 const router = Router();
 

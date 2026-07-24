@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { asyncHandler } from "../middleware/asyncHandler";
-import { ProductImageService } from "../services/productImage.service";
-import { ApiError } from "../utils/ApiError";
+import { asyncHandler } from "../middleware/asyncHandler.js";
+import { ProductImageService } from "../services/productImage.service.js";
+import { ApiError } from "../utils/ApiError.js";
 import { ImageType } from "@prisma/client";
 
 const productImageService = new ProductImageService();
