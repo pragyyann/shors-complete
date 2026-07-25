@@ -1,8 +1,11 @@
 import { CorsOptions } from "cors";
 
 export const corsOptions: CorsOptions = {
-  origin: (_origin, callback) => {
-    // TEMPORARY: Allow all origins for debugging
+  origin: (origin, callback) => {
+    console.log("========== CORS DEBUG ==========");
+    console.log("Incoming Origin:", origin);
+
+    // TEMPORARILY ALLOW EVERYTHING
     return callback(null, true);
   },
 
