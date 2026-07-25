@@ -5,6 +5,8 @@ import { prisma } from "./lib/prisma.js";
 
 const PORT = env.PORT || 5000;
 
+
+
 // Log routes recursively
 function printRoutes(layer: any, prefix: string = '') {
   if (layer.route) {
