@@ -16,6 +16,9 @@ const app = express();
 // Security Middlewares
 app.use(helmet());
 app.use(cors(corsOptions));
+
+// Handle CORS preflight requests
+app.options("*", cors(corsOptions));
 app.use(apiRateLimiter);
 
 // Logging
