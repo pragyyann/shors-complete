@@ -1,19 +1,27 @@
 import { CorsOptions } from "cors";
-import { env } from "./env.js";
-
-const allowedOrigins = env.CORS_ORIGIN.split(",").map((origin) => origin.trim());
 
 export const corsOptions: CorsOptions = {
-  origin: (origin, callback) => {
-    // Allow requests with no origin (like mobile apps, curl requests)
-    if (!origin) return callback(null, true);
-    
-    if (allowedOrigins.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
+  origin: (_origin, callback) => {
+    // TEMPORARY: Allow all origins for debugging
+    return callback(null, true);
   },
+
   credentials: true,
+
+  methods: [
+    "GET",
+    "POST",
+    "PUT",
+    "PATCH",
+    "DELETE",
+    "OPTIONS",
+  ],
+
+  allowedHeaders: [
+    "Content-Type",
+    "Authorization",
+    "X-Requested-With",
+  ],
+
   optionsSuccessStatus: 200,
 };
