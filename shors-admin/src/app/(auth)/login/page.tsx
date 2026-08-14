@@ -84,6 +84,7 @@ export default function LoginPage() {
                 placeholder="Enter your email"
                 autoComplete="username"
                 className="bg-zinc-950 border-zinc-800 text-zinc-100"
+                suppressHydrationWarning
                 {...register("email")}
               />
               {errors.email && (
@@ -100,6 +101,7 @@ export default function LoginPage() {
                 placeholder="Enter your password"
                 autoComplete="current-password"
                 className="bg-zinc-950 border-zinc-800 text-zinc-100"
+                suppressHydrationWarning
                 {...register("password")}
               />
               {errors.password && (
@@ -110,6 +112,7 @@ export default function LoginPage() {
               type="submit"
               className="w-full bg-zinc-50 text-zinc-950 hover:bg-zinc-200"
               disabled={isLoading}
+              suppressHydrationWarning
             >
               {isLoading ? (
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />

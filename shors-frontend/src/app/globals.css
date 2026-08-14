@@ -3,6 +3,15 @@
 :root {
   --vw: min(1vw, 16px);
 
+  /* Typography Variables */
+  --font-syne: 'Syne', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-jetbrains-mono: 'JetBrains Mono', monospace;
+  --font-cursive: 'Tangerine', cursive;
+  --font-italiana: 'Italiana', serif;
+  --font-serif: 'Playfair Display', serif;
+  --font-cormorant: 'Cormorant Garamond', serif;
+
   /* Design System Palette */
   --color-bg: #F8F6F2;
   /* Warm Ivory Base */
@@ -80,7 +89,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-weight: 700;
   letter-spacing: 0.02em;
   line-height: 1.15;
@@ -793,7 +802,7 @@ a {
   right: calc(-5 * var(--vw));
   top: 50%;
   transform: translateY(-50%) rotate(90deg);
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-size: clamp(6rem, calc(13 * var(--vw)), 13rem);
   font-weight: 300;
   letter-spacing: 0.2em;
@@ -850,7 +859,7 @@ a {
 }
 
 .hero-editorial-title {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-size: clamp(2rem, calc(4 * var(--vw)), 3.25rem);
   font-weight: 400;
   line-height: 1.2;
@@ -956,7 +965,7 @@ a {
 }
 
 .btn-primary {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   background-color: var(--color-primary);
   color: var(--color-bg);
   padding: 1.1rem 2.2rem;
@@ -974,7 +983,7 @@ a {
 }
 
 .btn-secondary {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   background-color: transparent;
   color: var(--color-text-main);
   padding: 1.1rem 2.2rem;
@@ -1085,7 +1094,7 @@ a {
 }
 
 .problem-quote {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-size: clamp(1.4rem, calc(2.5 * var(--vw)), 2rem);
   font-style: italic;
   line-height: 1.4;
@@ -1226,7 +1235,7 @@ a {
 }
 
 .card-link {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -1363,7 +1372,7 @@ a {
   border: 1px dashed var(--color-primary);
   padding: 1.5rem;
   text-align: center;
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-style: italic;
   font-size: 1.2rem;
   color: var(--color-primary);
@@ -1504,7 +1513,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--color-primary);
@@ -1518,7 +1527,7 @@ a {
 }
 
 .node-title {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -1545,7 +1554,7 @@ a {
 }
 
 .testimonial-text {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-style: italic;
   font-size: 1.05rem;
   line-height: 1.6;
@@ -1582,7 +1591,7 @@ a {
 }
 
 .brand-story-text {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-size: clamp(1.15rem, calc(2.2 * var(--vw)), 1.45rem);
   line-height: 1.7;
   color: var(--color-text-main);
@@ -1600,7 +1609,7 @@ a {
 }
 
 .founders-signature {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-style: italic;
   font-size: 1.25rem;
   color: var(--color-accent-terracotta);
@@ -1630,7 +1639,7 @@ a {
   font-size: 1.15rem;
   max-width: 500px;
   margin: 0 auto 2.5rem;
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-style: italic;
 }
 
@@ -1680,7 +1689,7 @@ a {
 .ticker-item {
   display: flex;
   align-items: center;
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-size: 1.1rem;
   color: rgba(248, 246, 242, 0.45);
   letter-spacing: 0.05em;
@@ -1806,7 +1815,7 @@ a {
 }
 
 .footer-brand-heading {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-style: italic;
   font-size: clamp(1.75rem, 3vw, 2.25rem);
   font-weight: 400;
@@ -1822,7 +1831,7 @@ a {
 }
 
 .footer-brand-title {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-size: clamp(6rem, 21.5vw, 24rem);
   font-weight: 400;
   color: rgba(248, 246, 242, 0.03);
@@ -1999,7 +2008,7 @@ a {
 }
 
 .modal-title {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-size: clamp(1.2rem, 4vw, 1.5rem);
   font-weight: 600;
   color: var(--color-text-main);
@@ -2089,7 +2098,7 @@ a {
   color: var(--color-primary);
   border: 1px solid var(--color-primary);
   padding: 1.1rem;
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-weight: 600;
   font-size: 0.95rem;
   letter-spacing: 0.15em;
@@ -2178,7 +2187,7 @@ a {
 }
 
 .meaning-word-wrapper {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-size: clamp(2rem, calc(5.2 * var(--vw)), 3.6rem);
   /* Scaled down slightly so long words don't overflow */
   font-weight: 700;
@@ -2542,7 +2551,7 @@ a {
 }
 
 .about-visual-main {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-weight: 700;
   font-size: clamp(2.5rem, calc(4 * var(--vw)), 4rem);
   line-height: 1;
@@ -2620,7 +2629,7 @@ a {
 }
 
 .contact-val {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-size: 1.3rem;
   color: var(--color-text-main);
   word-break: break-all;
@@ -2910,7 +2919,7 @@ a {
 }
 
 .premium-card-title {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-size: 1.1rem;
   /* Understated title */
   font-weight: 500;
@@ -2996,7 +3005,7 @@ a {
 }
 
 .premium-showcase-title {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-size: clamp(2rem, calc(3.5 * var(--vw)), 3rem);
   font-weight: 400;
   line-height: 1.1;
@@ -3173,7 +3182,7 @@ a {
 }
 
 .video-banner-title {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-size: clamp(2rem, calc(5 * var(--vw)), 3.5rem);
   font-weight: 400;
   line-height: 1.25;
@@ -3255,7 +3264,7 @@ a {
 }
 
 .manifesto-quote-col .quote-mark {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-size: 8rem;
   line-height: 0.1;
   color: rgba(139, 46, 46, 0.08);
@@ -3267,7 +3276,7 @@ a {
 }
 
 .manifesto-big-quote {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-size: clamp(1.5rem, calc(2.5 * var(--vw)), 2.2rem);
   font-weight: 400;
   line-height: 1.5;
@@ -3293,7 +3302,7 @@ a {
 }
 
 .manifesto-subheading {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.4;
@@ -3362,7 +3371,7 @@ a {
 }
 
 .craftsmanship-title {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-size: clamp(2.5rem, calc(5 * var(--vw)), 4.25rem);
   text-transform: uppercase;
   color: var(--color-text-main);
@@ -3640,7 +3649,7 @@ a {
 }
 
 .manifesto-left-col .manifesto-quote-block .quote-mark {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-size: 6rem;
   line-height: 0.1;
   color: rgba(139, 46, 46, 0.05);
@@ -3651,7 +3660,7 @@ a {
 }
 
 .manifesto-left-col .manifesto-big-quote {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-size: clamp(1.3rem, calc(1.8 * var(--vw)), 1.65rem);
   font-weight: 400;
   line-height: 1.55;
@@ -3676,7 +3685,7 @@ a {
 }
 
 .manifesto-left-col .manifesto-subheading {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-size: 1.3rem;
   font-weight: 500;
   line-height: 1.45;
@@ -3940,7 +3949,7 @@ a {
 }
 
 .mobile-music-link {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-size: clamp(2rem, calc(6 * var(--vw)), 3.5rem);
   font-weight: 700;
   color: rgba(255, 255, 255, 0.7);
@@ -4016,7 +4025,7 @@ a {
 }
 
 .marquee-item {
-  font-family: var(--font-cormorant), var(--font-serif), serif;
+  font-family: var(--font-cormorant), serif;
   /* Premium cormorant display serif */
   font-size: 14.5px;
   /* Within 14-15px */
@@ -4403,7 +4412,7 @@ a {
 }
 
 .no-products-found p {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-style: italic;
   font-size: 1.25rem;
   color: rgba(10, 10, 10, 0.5);
@@ -5769,7 +5778,7 @@ a {
 }
 
 .testimonial-quote-icon {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-size: 5rem;
   line-height: 0.8;
   color: rgba(183, 90, 60, 0.2);
@@ -6182,7 +6191,7 @@ a {
 }
 
 .editorial-collection-title {
-  font-family: var(--font-serif), var(--font-italiana), serif;
+  font-family: var(--font-italiana), serif;
   font-size: 2.8rem;
   /* Large magazine header style */
   font-weight: 300;
@@ -6201,7 +6210,7 @@ a {
 }
 
 .editorial-collection-subtitle {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-style: italic;
   font-size: 1.25rem;
   color: #756B61;
@@ -6421,7 +6430,7 @@ a {
 }
 
 .editorial-hover-story {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-style: italic;
   font-size: 0.95rem;
   line-height: 1.5;
@@ -6514,7 +6523,7 @@ a {
 }
 
 .editorial-card-title {
-  font-family: var(--font-serif), var(--font-italiana), serif;
+  font-family: var(--font-italiana), serif;
   font-size: 1.45rem;
   /* Large elegant serif */
   font-weight: 400;
@@ -6740,7 +6749,7 @@ a {
 }
 
 .editorial-placeholder-title {
-  font-family: var(--font-serif), var(--font-italiana), serif;
+  font-family: var(--font-italiana), serif;
   font-size: 1.35rem;
   font-weight: 300;
   color: #2B211C;
@@ -6809,7 +6818,7 @@ a {
 }
 
 .no-products-found-lookbook p {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-style: italic;
   font-size: 1.3rem;
   color: #756B61;
@@ -6930,7 +6939,7 @@ a {
 }
 
 .about-hero-title {
-  font-family: var(--font-serif), var(--font-italiana), serif;
+  font-family: var(--font-italiana), serif;
   font-size: clamp(3.5rem, calc(8 * var(--vw)), 6.5rem);
   font-weight: 300;
   line-height: 1.05;
@@ -6940,7 +6949,7 @@ a {
 }
 
 .about-hero-sentence {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-style: italic;
   font-size: clamp(1.2rem, calc(2.5 * var(--vw)), 1.8rem);
   color: rgba(250, 248, 245, 0.9);
@@ -6992,7 +7001,7 @@ a {
 }
 
 .about-editorial-quote {
-  font-family: var(--font-serif), var(--font-italiana), serif;
+  font-family: var(--font-italiana), serif;
   font-size: clamp(2rem, calc(3.5 * var(--vw)), 3.2rem);
   line-height: 1.15;
   color: #2B211C;
@@ -7060,7 +7069,7 @@ a {
 }
 
 .about-statement-text {
-  font-family: var(--font-serif), var(--font-italiana), serif;
+  font-family: var(--font-italiana), serif;
   font-size: clamp(4rem, calc(10 * var(--vw)), 8rem);
   font-weight: 300;
   line-height: 1.1;
@@ -7095,7 +7104,7 @@ a {
 }
 
 .about-collage-title {
-  font-family: var(--font-serif), var(--font-italiana), serif;
+  font-family: var(--font-italiana), serif;
   font-size: 2.2rem;
   color: #2B211C;
   margin: 0;
@@ -7226,7 +7235,7 @@ a {
 }
 
 .about-craft-heading {
-  font-family: var(--font-serif), var(--font-italiana), serif;
+  font-family: var(--font-italiana), serif;
   font-size: 2.5rem;
   color: #2B211C;
   margin: 0 0 1.2rem 0;
@@ -7266,7 +7275,7 @@ a {
 }
 
 .craft-spec-row .spec-value {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-size: 0.95rem;
   font-style: italic;
   color: #2B211C;
@@ -7293,7 +7302,7 @@ a {
 }
 
 .about-fullscreen-quote {
-  font-family: var(--font-serif), var(--font-italiana), serif;
+  font-family: var(--font-italiana), serif;
   font-size: clamp(2.2rem, calc(5 * var(--vw)), 4.2rem);
   line-height: 1.25;
   color: #2B211C;
@@ -7346,7 +7355,7 @@ a {
 }
 
 .about-timeline-heading {
-  font-family: var(--font-serif), var(--font-italiana), serif;
+  font-family: var(--font-italiana), serif;
   font-size: 2.2rem;
   color: #2B211C;
   margin: 0;
@@ -7407,7 +7416,7 @@ a {
 }
 
 .timeline-step-name {
-  font-family: var(--font-serif), var(--font-italiana), serif;
+  font-family: var(--font-italiana), serif;
   font-size: 1.25rem;
   color: #2B211C;
   margin: 0 0 0.5rem 0;
@@ -7450,7 +7459,7 @@ a {
 }
 
 .about-gallery-heading {
-  font-family: var(--font-serif), var(--font-italiana), serif;
+  font-family: var(--font-italiana), serif;
   font-size: 2.2rem;
   color: #2B211C;
   margin: 0;
@@ -7548,7 +7557,7 @@ a {
 }
 
 .about-outro-title {
-  font-family: var(--font-serif), var(--font-italiana), serif;
+  font-family: var(--font-italiana), serif;
   font-size: clamp(3rem, calc(7 * var(--vw)), 5.5rem);
   font-weight: 300;
   line-height: 1.1;
@@ -7998,7 +8007,7 @@ a {
 }
 
 .mobile-collection-title {
-  font-family: var(--font-serif), var(--font-italiana), serif;
+  font-family: var(--font-italiana), serif;
   font-weight: 300;
   text-transform: uppercase;
   color: #2B211C;
@@ -8006,7 +8015,7 @@ a {
 }
 
 .mobile-collection-subtitle {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-style: italic;
   color: #756B61;
   margin: 0;
@@ -8066,7 +8075,7 @@ a {
 }
 
 .mobile-card-title {
-  font-family: var(--font-serif), var(--font-italiana), serif;
+  font-family: var(--font-italiana), serif;
   font-weight: 400;
   color: #2B211C;
   margin: 0;
@@ -8138,7 +8147,7 @@ a {
 }
 
 .mobile-about-name {
-  font-family: var(--font-serif), var(--font-italiana), serif;
+  font-family: var(--font-italiana), serif;
   font-weight: 300;
   color: #2B211C;
   margin: 0;
@@ -8146,7 +8155,7 @@ a {
 }
 
 .mobile-about-story {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   color: #4A4036;
   margin: 0;
   max-width: 90%;
@@ -8168,7 +8177,7 @@ a {
 }
 
 .mobile-about-closing h3 {
-  font-family: var(--font-serif), var(--font-italiana), serif;
+  font-family: var(--font-italiana), serif;
   font-size: clamp(28px, calc(8 * var(--vw)), 36px);
   font-weight: 300;
   color: #2B211C;
@@ -8241,7 +8250,7 @@ a {
   margin-bottom: 12px;
   text-transform: none;
   letter-spacing: normal;
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-size: 13px !important;
   line-height: 1.6 !important;
   max-width: 90%;
@@ -8270,7 +8279,7 @@ a {
 }
 
 .mobile-showcase-title {
-  font-family: var(--font-serif), var(--font-italiana), serif;
+  font-family: var(--font-italiana), serif;
   font-size: 26px;
   font-weight: 300;
   color: #2B211C;
@@ -8279,7 +8288,7 @@ a {
 }
 
 .mobile-showcase-desc {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-italiana), serif;
   font-size: 13px;
   color: #756B61;
   line-height: 1.7;
@@ -8324,7 +8333,7 @@ a {
 }
 
 .mobile-product-card-minimal .mobile-product-title {
-  font-family: var(--font-serif), var(--font-italiana), serif;
+  font-family: var(--font-italiana), serif;
   font-size: 14px !important;
   color: #2B211C;
   margin: 0;
