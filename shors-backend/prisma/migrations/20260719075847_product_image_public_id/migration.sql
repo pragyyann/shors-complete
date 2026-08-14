@@ -5,4 +5,4 @@
 
 */
 -- AlterTable
-ALTER TABLE `productimage` ADD COLUMN `publicId` VARCHAR(191) NOT NULL;
+ALTER TABLE `ProductImage` ADD COLUMN `publicId` VARCHAR(191) NOT NULL;
