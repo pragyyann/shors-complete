@@ -7,9 +7,16 @@ export class AuthService {
   constructor(private prisma: PrismaClient) {}
 
   async login(email: string, password: string) {
-    const admin = await this.prisma.admin.findUnique({
-      where: { email },
+    const cleanEmail = typeof email === "string" ? email.trim().toLowerCase() : email;
+    let admin = await this.prisma.admin.findUnique({
+      where: { email: cleanEmail },
     });
+
+    if (!admin && cleanEmail !== email) {
+      admin = await this.prisma.admin.findUnique({
+        where: { email },
+      });
+    }
 
     if (!admin) {
       throw new ApiError(401, "Invalid email or password");
